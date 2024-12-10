@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="resume-container">
+        <div class="left-section">
+            <img id="profile-pic" src="https://via.placeholder.com/120" alt="Profile Picture">
+            <input type="file" id="upload-pic" onchange="uploadProfilePic(event)">
+            <h1 id="name" contenteditable="true">Hasan Raza</h1>
+            <textarea id="about" placeholder="Write a short intro about yourself"></textarea>
+        </div>
+        <div class="right-section">
+            <!-- Contact Section -->
+            <div class="form-section">
+                <h2>Contact</h2>
+                <input type="email" id="email" placeholder="Enter your email">
+                <input type="tel" id="phone" placeholder="Enter your phone number">
+                <button onclick="saveContact()">Save</button>
+            </div>
+
+            <!-- Education Section -->
+            <div class="form-section">
+                <h2>Education</h2>
+                <select id="degree">
+                    <option value="">Select Degree</option>
+                    <option value="bachelor">Bachelor's</option>
+                    <option value="master">Master's</option>
+                    <option value="phd">Ph.D</option>
+                </select>
+                <input type="text" id="university" placeholder="Enter University Name">
+                <button onclick="saveEducation()">Save</button>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="form-section">
+                <h2>Experience</h2>
+                <input type="text" id="job-title" placeholder="Enter Job Title">
+                <input type="text" id="company" placeholder="Enter Company Name">
+                <button onclick="saveExperience()">Save</button>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="form-section">
+                <h2>Skills</h2>
+                <input type="text" id="skill" placeholder="Enter a Skill">
+                <button onclick="addSkill()">Add Skill</button>
+                <ul id="skills-list"></ul>
+            </div>
+
+            <!-- Social Accounts Section -->
+            <div class="form-section">
+                <h2>Social Accounts</h2>
+                <input type="url" id="linkedin" placeholder="Enter LinkedIn Profile URL">
+                <input type="url" id="github" placeholder="Enter GitHub Profile URL">
+                <button onclick="saveSocial()">Save</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
